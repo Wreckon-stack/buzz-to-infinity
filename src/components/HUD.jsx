@@ -87,7 +87,7 @@ export default function HUD({ scrollProgress = 0 }) {
       </div>
 
       {/* ── $BUZZ branding ── */}
-      <div className="absolute top-1/2 left-6 sm:left-8 -translate-y-1/2">
+      <div className="absolute top-1/2 left-6 sm:left-8 -translate-y-1/2 flex flex-col items-start gap-4">
         <div
           className="title-infinity text-lg sm:text-xl md:text-2xl"
           style={{
@@ -101,6 +101,33 @@ export default function HUD({ scrollProgress = 0 }) {
         >
           $BUZZ
         </div>
+
+        {/* JOIN TELEGRAM */}
+        <a
+          href="https://t.me/BUZZLIGHTYEARMEME"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="pointer-events-auto flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105 hover:brightness-125"
+          style={{
+            background: 'linear-gradient(135deg, rgba(99,102,241,0.25), rgba(168,85,247,0.2))',
+            border: '1px solid rgba(99,102,241,0.35)',
+            boxShadow: '0 0 15px rgba(99,102,241,0.15), inset 0 0 15px rgba(99,102,241,0.05)',
+            textDecoration: 'none',
+          }}
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M22.05 1.577c-.393-.016-.784.08-1.117.235-.484.186-4.92 1.902-9.41 3.64L2.97 8.6c-.832.296-.154.163-.886.47-.37.155-.756.406-.898.82-.14.41.015.737.178 1.011.163.275.37.477.63.626l4.33 2.174c.262.127.567.148.85.05L20.2 8.172c.152-.058.466-.188.604.015.14.203-.04.45-.174.583L12.8 16.26c-.283.262-.47.655-.442 1.078l-.004.14c0 .37.1.735.32 1.052.22.317.547.553.92.655l.078.024 3.95 1.182c.31.092.633.093.95.01.315-.082.598-.255.82-.498l2.23-2.43 4.23 3.122c.478.353 1.025.488 1.527.336.5-.15.86-.53 1.01-1.05.15-.52 7.74-32.56 7.74-32.56.16-.648.08-1.272-.22-1.752-.3-.48-.82-.793-1.4-.816zM21.1 4.6L9.14 14.26l-.004-.002-4.16-2.088L21.1 4.6z" fill="rgba(99,102,241,0.9)"/>
+          </svg>
+          <span
+            className="hud-text text-xs"
+            style={{
+              color: 'rgba(255,255,255,0.85)',
+              textShadow: '0 0 8px rgba(99,102,241,0.4)',
+            }}
+          >
+            Join Telegram
+          </span>
+        </a>
       </div>
 
       {/* Corner brackets - cinematic framing */}
