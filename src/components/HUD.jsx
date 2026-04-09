@@ -130,6 +130,41 @@ export default function HUD({ scrollProgress = 0 }) {
         </a>
       </div>
 
+      {/* ── Contract Address ── */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 pointer-events-auto">
+        <button
+          onClick={() => {
+            navigator.clipboard.writeText('2VCDZMB3DwuwX5SNCKsW4T6NV5XdrdnjHa8uw32ppump')
+          }}
+          className="flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105 hover:brightness-125 cursor-pointer"
+          style={{
+            background: 'linear-gradient(135deg, rgba(99,102,241,0.2), rgba(168,85,247,0.15))',
+            border: '1px solid rgba(99,102,241,0.3)',
+            boxShadow: '0 0 15px rgba(99,102,241,0.1)',
+          }}
+          title="Click to copy CA"
+        >
+          <span className="hud-text text-xs" style={{ color: 'rgba(99,102,241,0.6)' }}>CA:</span>
+          <span
+            className="hud-text text-xs"
+            style={{
+              color: 'rgba(255,255,255,0.75)',
+              textShadow: '0 0 8px rgba(99,102,241,0.3)',
+              maxWidth: '280px',
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
+              whiteSpace: 'nowrap',
+            }}
+          >
+            2VCDZMB3DwuwX5SNCKsW4T6NV5XdrdnjHa8uw32ppump
+          </span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(99,102,241,0.6)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+            <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" />
+          </svg>
+        </button>
+      </div>
+
       {/* Corner brackets - cinematic framing */}
       <div className="absolute top-4 left-4 w-6 h-6 border-t border-l border-indigo-500/20" />
       <div className="absolute top-4 right-4 w-6 h-6 border-t border-r border-indigo-500/20" />
